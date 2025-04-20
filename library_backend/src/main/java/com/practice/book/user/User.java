@@ -1,8 +1,11 @@
 package com.practice.book.user;
 
+import com.practice.book.book.Book;
+import com.practice.book.history.BookHistoryTransaction;
 import com.practice.book.role.Role;
 import jakarta.persistence.*;
 import lombok.*;
+import lombok.experimental.SuperBuilder;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
@@ -19,7 +22,7 @@ import java.util.stream.Collectors;
 
 @Getter
 @Setter
-@Builder
+@SuperBuilder
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
@@ -37,9 +40,15 @@ public class User implements UserDetails, Principal {
     private String password;
     private boolean accountLocked;
     private boolean enabled;
+
     @ManyToMany(fetch = FetchType.EAGER )
     private List<Role> roles;
 
+    @OneToMany(mappedBy = "owner")
+    private List<Book> books;
+
+    @OneToMany(mappedBy = "user")
+    private List<BookHistoryTransaction> histories;
 
     @CreatedDate
     @Column(nullable = false, updatable = false)
