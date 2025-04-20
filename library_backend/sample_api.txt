@@ -1,0 +1,21 @@
+<REGISTER>
+==========
+curl --location 'localhost:8088/api/v1/auth/register' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "username":"thinzar may",
+    "email":"maythinzar@gmail.com",
+    "password":"pw12345678"
+}'
+
+<ACTIVATE CODE>
+curl --location 'localhost:8088/api/v1/auth/activate-account?token=138019' \
+--data ''
+
+<AUTHENTICATE>
+curl --location 'localhost:8088/api/v1/auth/authenticate' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "email":"may123@gmail.com",
+    "password":"pw12345678"
+}'
