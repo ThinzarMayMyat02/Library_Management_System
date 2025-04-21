@@ -18,6 +18,6 @@ public class Feedback extends BaseEntity {
     @ManyToOne
     @JoinColumn(name = "book_id")
     private Book book;
-    private String note;
+    private double note;
     private String comment;
 }
