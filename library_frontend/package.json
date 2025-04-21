@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+ st": "ng test",
+    "api-gen" : "ng-openapi-gen --input ./src/app/openApi/OpenApi.json --output ./src/app/services"
   },
   "private": true,
   "dependencies": {
@@ -21,6 +22,7 @@
     "@fortawesome/fontawesome-free": "^6.7.2",
     "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.5",
+    "ng-openapi-gen": "^0.53.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"
