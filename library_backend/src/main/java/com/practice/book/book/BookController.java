@@ -1,5 +1,6 @@
 package com.practice.book.book;
 
+import com.practice.book.common.PageResponse;
 import io.swagger.v3.oas.annotations.Parameter;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;

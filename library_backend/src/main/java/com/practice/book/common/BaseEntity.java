@@ -1,4 +1,4 @@
-package com.practice.book.book;
+package com.practice.book.common;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.EntityListeners;

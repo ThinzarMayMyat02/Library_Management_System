@@ -1,6 +1,6 @@
 package com.practice.book.history;
 
-import com.practice.book.book.BaseEntity;
+import com.practice.book.common.BaseEntity;
 import com.practice.book.book.Book;
 import com.practice.book.user.User;
 import jakarta.persistence.*;

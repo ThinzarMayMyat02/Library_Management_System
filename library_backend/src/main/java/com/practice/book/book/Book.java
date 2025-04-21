@@ -1,5 +1,7 @@
 package com.practice.book.book;
 
+import com.practice.book.common.BaseEntity;
+import com.practice.book.feedback.Feedback;
 import com.practice.book.history.BookHistoryTransaction;
 import com.practice.book.user.User;
 import jakarta.persistence.*;
