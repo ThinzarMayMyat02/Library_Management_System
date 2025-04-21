@@ -1,6 +1,7 @@
-package com.practice.book.book;
+package com.practice.book.feedback;
 
-import com.practice.book.user.User;
+import com.practice.book.book.Book;
+import com.practice.book.common.BaseEntity;
 import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
@@ -18,6 +19,6 @@ public class Feedback extends BaseEntity {
     @ManyToOne
     @JoinColumn(name = "book_id")
     private Book book;
-    private double note;
+    private Double note;
     private String comment;
 }
